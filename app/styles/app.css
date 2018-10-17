@@ -1,0 +1,10 @@
+.message {
+  width: 500px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.from{
+  margin-right: 50px;
+  float:left;
+}

@@ -1,5 +1,18 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div>
+  {{#link-to "compose"}}
+    <button>Compose</button>
+  {{/link-to}}
+</div>
 
+<nav>
+  {{#link-to "index"}}
+    Inbox
+  {{/link-to}}
+  {{#link-to "sent"}}
+    Sent
+  {{/link-to}}
+  {{#link-to "trash"}}
+    Trash
+  {{/link-to}}
+</nav>
 {{outlet}}
