@@ -1,8 +1,12 @@
-.message {
+/* .message {
   width: 500px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+} */
+.starButton{
+  float:left;
+  overflow: hidden;
 }
 .from{
   margin-right: 50px;

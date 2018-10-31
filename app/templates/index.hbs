@@ -1,14 +1,47 @@
 
+<div class="starredList">
+  <h2>Starred</h2>
   {{#each model as |email|}}
-  <div>
-    <div class="from">
-        {{email.from}}
-    </div>
-    {{#link-to "email" email.id}}
-    <div class="message">
-        {{email.message}}
-    </div>
-    {{/link-to}}
-  </div>
+    {{#if email.starred}}
+      <SingleEmail
+        @email={{email}}
+        />
+    {{/if}}
   {{/each}}
+</div>
+<div class="unstarredList">
+  <h2>Unstarred</h2>
+  {{#each model as |email|}}
+  {{#if email.starred}}
+  {{else}}
+    <SingleEmail
+      @email={{email}} @isStarred ={{false}}
+    />
+  {{/if}}
+  {{/each}}
+</div>
+
+
+<!--
+
+  {{#each model as |email|}}
+    <div>
+      <div class="starButton">
+      <StarButton
+        @on={{email.starred}}
+        @onClick={{action "star" email}}
+         />
+      </div>
+      <div class="from">
+        {{email.from}}
+      </div>
+      {{#link-to "email" email.id}}
+        <div class="message">
+          <p>
+            {{truncate-text email.message 80}}
+          </p>
+        </div>
+      {{/link-to}}
+    </div>
+  {{/each}} -->
 {{outlet}}
