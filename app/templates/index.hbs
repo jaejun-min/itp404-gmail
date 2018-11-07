@@ -9,14 +9,16 @@
     {{/if}}
   {{/each}}
 </div>
-<div class="unstarredList">
+<div  class="unstarredList">
   <h2>Unstarred</h2>
   {{#each model as |email|}}
   {{#if email.starred}}
   {{else}}
+  <p data-test="countList">
     <SingleEmail
-      @email={{email}} @isStarred ={{false}}
+      @email={{email}}
     />
+  </p>
   {{/if}}
   {{/each}}
 </div>

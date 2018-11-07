@@ -1,9 +1,9 @@
 <nav>
-  <button type="button" onclick= {{action "deleteEmail" model}}>
+  <button data-test="delete-email" type="button" onclick= {{action "deleteEmail" model}}>
     Delete
   </button>
 </nav>
-<h1>Subject: {{model.title}} </h1>
-<h3>To: {{model.to}} </h3>
-<h3>From: {{model.from}} </h3>
-<p>{{model.message}}</p>
+<h1 data-test="testSubject">Subject: {{model.subject}} </h1>
+<h3 data-test="testTo">To: {{model.to}} </h3>
+<h3 data-test="testFrom">From: {{model.from}} </h3>
+<p data-test="testMessage">{{model.message}}</p>

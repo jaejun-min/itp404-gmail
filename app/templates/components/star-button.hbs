@@ -1,7 +1,7 @@
-<button type="button" onclick={{action "toggle"}}>
+<button data-test="testStarred" value={{on}} type="button" onclick={{action "toggle"}}>
   {{#if @on}}
-    <img alt="starFilled" src="assets/images/starfilled.png" width="15" height="15">
+    <img data-test="starFilled" alt="starFilled" src="assets/images/starfilled.png" width="15" height="15">
   {{else}}
-    <img alt="star" src="assets/images/star.png" width="15" height="15">
+    <img data-test="starUnfilled" alt="star" src="assets/images/star.png" width="15" height="15">
   {{/if}}
 </button>

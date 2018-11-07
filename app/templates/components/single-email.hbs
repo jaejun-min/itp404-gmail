@@ -1,19 +1,16 @@
 
-<div>
-  <div class="starButton">
-  <StarButton
-    @on={{email.starred}}
-    @onClick={{action "star" email}}
-     />
-  </div>
-  <div class="from">
-    {{email.from}}
-  </div>
-  {{#link-to "email" email.id}}
-    <div class="message">
-      <p>
-        {{truncate-text email.message 80}}
-      </p>
+<div >
+    <div class="starButton">
+    <StarButton data-test="testStar" @on={{email.starred}} @onClick={{action "star" email}}/>
     </div>
-  {{/link-to}}
+    <div class="from">
+      {{email.from}}
+    </div>
+    {{#link-to "email" email.id}}
+      <div class="message">
+        <p data-test="truncateTest">
+          {{truncate-text email.message 40}}
+        </p>
+      </div>
+    {{/link-to}}
 </div>

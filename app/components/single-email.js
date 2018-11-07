@@ -4,7 +4,6 @@ export default Component.extend({
   actions:{
     star: function(email, newValue) {
       email.set('starred', newValue);
-
     }
   }
 
